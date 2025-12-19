@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    padding: 4rem 0;
+    background-color: #f1f5f9;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Product Card */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+/* Rating */
+.rating {
+    color: #ffc107;
+    font-size: 0.9rem;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0.5rem 0;
+}
+
+/* Tab Content */
+.tab-content {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Review Input */
+.rating-input {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.rating-input input {
+    display: none;
+}
+
+.rating-input label {
+    color: #ddd;
+    font-size: 1.5rem;
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.rating-input input:checked ~ label,
+.rating-input input:checked ~ label ~ label {
+    color: #ffc107;
+}
+
+.rating-input label:hover,
+.rating-input label:hover ~ label {
+    color: #ffc107;
+}
+
+/* Quantity Input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 0.5rem;
+}
+
+/* Sidebar for Admin */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link {
+    padding: 0.75rem 1.5rem;
+    color: #495057;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #e9ecef;
+    color: #0d6efd;
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Admin Content */
+.w-100 {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+    }
+    .w-100 {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .w-100 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
